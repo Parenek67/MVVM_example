@@ -18,14 +18,11 @@ import com.example.mvvm_example.Presentation.ViewModel.AddFoodViewModel;
 import com.example.mvvm_example.databinding.AddFoodFragmentBinding;
 
 public class AddFood extends Fragment {
-
     private AddFoodViewModel mViewModel;
     private AddFoodFragmentBinding mBinding;
-
     public static AddFood newInstance() {
         return new AddFood();
     }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -34,7 +31,7 @@ public class AddFood extends Fragment {
         mBinding.fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!mBinding.partyName.getText().toString().isEmpty()) {
+                try{
                     mViewModel.AddFood(
                             mBinding.partyName.getText().toString(),
                             mBinding.partyDescription.getText().toString(),
@@ -46,9 +43,9 @@ public class AddFood extends Fragment {
                             Double.parseDouble(mBinding.partyUgliPercent.getText().toString()),
                             Integer.parseInt(mBinding.partyCalories.getText().toString())
                     );
-
                     Navigation.findNavController(v).popBackStack();
-                } else {
+                }
+                catch (Exception e){
                     Toast.makeText(getContext(), "Вы ввели не все данные", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -60,7 +57,6 @@ public class AddFood extends Fragment {
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         mViewModel = new ViewModelProvider(this).get(AddFoodViewModel.class);
-        // TODO: Use the ViewModel
     }
 
     @Override

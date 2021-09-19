@@ -28,14 +28,11 @@ import org.jetbrains.annotations.NotNull;
 import java.util.List;
 
 public class FoodList extends Fragment {
-
     private FoodListViewModel mViewModel;
     private FoodListFragmentBinding mBinding;
-
     public static FoodList newInstance() {
         return new FoodList();
     }
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container,
                              @Nullable Bundle savedInstanceState) {
@@ -49,17 +46,18 @@ public class FoodList extends Fragment {
                 Navigation.findNavController(v).navigate(R.id.action_partyList_to_addParty);
             }
         });
-
         new ItemTouchHelper(new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
             @Override
-            public boolean onMove(@NonNull @NotNull RecyclerView recyclerView, @NonNull @NotNull RecyclerView.ViewHolder viewHolder, @NonNull @NotNull RecyclerView.ViewHolder target) {
+            public boolean onMove(@NonNull @NotNull RecyclerView recyclerView, @NonNull @NotNull
+                    RecyclerView.ViewHolder viewHolder, @NonNull @NotNull RecyclerView.ViewHolder target) {
                 return false;
             }
 
             @Override
             public void onSwiped(@NonNull @NotNull RecyclerView.ViewHolder viewHolder, int direction) {
                 int position = viewHolder.getAdapterPosition();
-                mViewModel.deleteFood(((FoodListAdapter) mBinding.foodListRecycler.getAdapter()).getData().get(position));
+                mViewModel.deleteFood(((FoodListAdapter)
+                        mBinding.foodListRecycler.getAdapter()).getData().get(position));
             }
         }).attachToRecyclerView(mBinding.foodListRecycler);
         return mBinding.getRoot();

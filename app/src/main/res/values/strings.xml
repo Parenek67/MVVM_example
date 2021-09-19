@@ -1,4 +1,3 @@
 <resources>
-    <string name="app_name">MVVM_example</string>
-    <string name="more">Подробнее...</string>
+    <string name="app_name">Сalorie counting</string>
 </resources>

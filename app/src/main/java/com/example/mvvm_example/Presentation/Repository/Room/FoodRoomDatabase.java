@@ -13,7 +13,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Database(entities = {FoodDTO.class}, version = 1, exportSchema = false)
-public abstract class FoodRoomDatabase extends RoomDatabase {//сама база данных
+public abstract class FoodRoomDatabase extends RoomDatabase {
     public abstract FoodDAO foodDao();
 
     private static volatile FoodRoomDatabase INSTANCE;

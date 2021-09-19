@@ -13,106 +13,119 @@
         android:orientation="vertical"
         android:padding="@dimen/normalMargin">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center_vertical"
-                android:layout_marginStart="@dimen/halfMargin"
-                android:text="Добавить новую еду(в 100г)"
-                android:textSize="18sp"
-                />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/halfMargin"
+            android:gravity="center_vertical"
+            android:text="Добавить новую еду(в 100г)"
+            android:textSize="18sp" />
 
 
         <EditText
             android:id="@+id/party_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:layout_marginBottom="@dimen/normalMargin"
             android:hint="Введите название еды"
-            android:layout_marginBottom="@dimen/normalMargin"/>
+            android:textSize="20sp" />
 
         <EditText
             android:id="@+id/party_description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Добавьте описание еды"
-            android:layout_marginBottom="@dimen/halfMargin"/>
+            android:layout_marginBottom="@dimen/halfMargin"
+            android:hint="Добавьте описание еды" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:gravity="center_vertical"
                 android:layout_marginStart="@dimen/halfMargin"
+                android:gravity="center_vertical"
                 android:text="Ккал:"
-                android:textSize="18sp"
-                />
+                android:textSize="18sp" />
+
             <EditText
                 android:id="@+id/party_calories"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Введите калории"
-                android:layout_marginBottom="@dimen/halfMargin"/>
+                android:layout_marginBottom="@dimen/halfMargin"
+                android:hint="Введите калории" />
         </LinearLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/halfMargin">
+            android:layout_marginBottom="@dimen/halfMargin"
+            android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Белки"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Белки" />
+
                 <EditText
                     android:id="@+id/party_proteins"
+                    android:inputType="number"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Жиры"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Жиры" />
+
                 <EditText
                     android:id="@+id/party_fats"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_weight="1" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Углеводы"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Углеводы" />
+
                 <EditText
                     android:id="@+id/party_ugli"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:inputType="number"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
 
             </LinearLayout>
         </LinearLayout>
@@ -120,87 +133,92 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_vertical"
             android:layout_marginStart="@dimen/halfMargin"
+            android:gravity="center_vertical"
             android:text="Укажите % БЖУ от суточной нормы"
-            android:textSize="18sp"
-            />
+            android:textSize="18sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="@dimen/halfMargin">
+            android:layout_marginBottom="@dimen/halfMargin"
+            android:orientation="horizontal">
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Белки"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Белки" />
+
                 <EditText
                     android:id="@+id/party_proteins_percent"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Жиры"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Жиры" />
+
                 <EditText
                     android:id="@+id/party_fats_percent"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
             </LinearLayout>
+
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Углеводы"
-                    android:gravity="center"/>
+                    android:gravity="center"
+                    android:text="Углеводы" />
+
                 <EditText
                     android:id="@+id/party_ugli_percent"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp"
-                    android:layout_weight="1"/>
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1" />
 
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottom_app_bar"
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-
-        android:backgroundTint="@color/purple_500"
-        app:fabAlignmentMode="center"/>
-
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/fab"
-        app:layout_anchor="@id/bottom_app_bar"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="20dp"
         android:src="@android:drawable/ic_input_add"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

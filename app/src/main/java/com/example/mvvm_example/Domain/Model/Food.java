@@ -1,86 +1,86 @@
 
 package com.example.mvvm_example.Domain.Model;
 
-public class Food {//класс-сущность, необходим для заполнения списка
-    public String name_;
-    public int calories_;
-    public String description_;
-    public Double protein_;
-    public Double fats_;
-    public Double carbohydrates_;
-    public Double protein_percent_;
-    public Double fats_percent_;
-    public Double carbohydrates_percent_;
+public class Food {
+    public String name;
+    public int calories;
+    public String description;
+    public Double protein;
+    public Double fats;
+    public Double carbohydrates;
+    public Double protein_percent;
+    public Double fats_percent;
+    public Double carbohydrates_percent;
     public Food() {}
-    public Food(String name, String description, Double protein, Double fats, Double carbohydrates,
-                Double protein_percent, Double fats_percent, Double carbohydrates_percent, int calories) {
-        this.name_ = name;
-        this.carbohydrates_ = carbohydrates;
-        this.carbohydrates_percent_ = carbohydrates_percent;
-        this.description_ = description;
-        this.fats_ = fats;
-        this.fats_percent_ = fats_percent;
-        this.protein_ = protein;
-        this.protein_percent_ = protein_percent;
-        this.calories_ = calories;
+    public Food(String name, String description, Double protein,
+                Double fats, Double carbohydrates,
+                Double protein_percent, Double fats_percent,
+                Double carbohydrates_percent, int calories) {
+        this.name = name;
+        this.carbohydrates = carbohydrates;
+        this.carbohydrates_percent = carbohydrates_percent;
+        this.description = description;
+        this.fats = fats;
+        this.fats_percent = fats_percent;
+        this.protein = protein;
+        this.protein_percent = protein_percent;
+        this.calories = calories;
     }
     public void setName(String name){
-        this.name_ = name;
+        this.name = name;
     }
     public String getName(){
-        return name_;
+        return name;
     }
     public void setDescription(String description){
-        this.description_ = description;
+        this.description = description;
     }
     public String getDescription(){
-        return description_;
+        return description;
     }
-    ////////////////////////////////
     public void setProtein(Double protein){
-        this.protein_ = protein;
+        this.protein = protein;
     }
     public Double getProtein(){
-        return protein_;
+        return protein;
     }
     public void setProtein_percent(Double protein_percent){
-        this.protein_percent_ = protein_percent;
+        this.protein_percent = protein_percent;
     }
     public Double getProtein_percent(){
-        return protein_percent_;
+        return protein_percent;
     }
     ///////////////////////////////
     public void setFats(Double fats){
-        this.fats_ = fats;
+        this.fats = fats;
     }
     public Double getFats(){
-        return fats_;
+        return fats;
     }
     public void setFats_percent(Double fats_percent){
-        this.fats_percent_ = fats_percent;
+        this.fats_percent = fats_percent;
     }
     public Double getFats_percent(){
-        return protein_percent_;
+        return protein_percent;
     }
-    ///////////////////////////
     public void setCarbohydrates(Double carbohydrates){
-        this.carbohydrates_ = carbohydrates;
+        this.carbohydrates = carbohydrates;
     }
     public Double getCarbohydrates(){
-        return carbohydrates_;
+        return carbohydrates;
     }
     public void setCarbohydrates_percent(Double carbohydrates_percent){
-        this.carbohydrates_percent_ = carbohydrates_percent;
+        this.carbohydrates_percent = carbohydrates_percent;
     }
     public Double getCarbohydrates_percent(){
-        return carbohydrates_percent_;
+        return carbohydrates_percent;
     }
 
     public int getCalories() {
-        return calories_;
+        return calories;
     }
 
     public void setCalories(int calories) {
-        this.calories_ = calories;
+        this.calories = calories;
     }
 }

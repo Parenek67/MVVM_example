@@ -12,7 +12,7 @@ import com.example.mvvm_example.Presentation.Repository.Room.DAO.FoodDAO;
 
 import java.util.List;
 
-public class FoodRepository implements RepositoryTasks {//если бд меняется, то изменения делаются только здесь
+public class FoodRepository implements RepositoryTasks {
     private FoodDAO mFoodDao;
     private LiveData<List<FoodDTO>> mAllFood = new MutableLiveData<>();
 

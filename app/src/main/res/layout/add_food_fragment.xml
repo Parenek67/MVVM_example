@@ -53,6 +53,7 @@
             <EditText
                 android:id="@+id/party_calories"
                 android:layout_width="match_parent"
+                android:inputType="number"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/halfMargin"
                 android:hint="Введите калории" />
